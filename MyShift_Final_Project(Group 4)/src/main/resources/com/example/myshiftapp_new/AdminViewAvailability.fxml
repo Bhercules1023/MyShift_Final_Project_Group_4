@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myshiftapp_new.ViewAvailabilityController">
+    <top>
+        <AnchorPane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #F0E68C;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="428.0" layoutY="28.0" text="MY">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label layoutX="478.0" layoutY="28.0" text="SHIFT" textFill="#8ed2ff">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="viewUserAvailability" layoutX="50.0" layoutY="15.0" prefHeight="300.0" prefWidth="900.0">
+              <columns>
+                <TableColumn fx:id="getUsername" prefWidth="100.0" text="First Name" />
+                  <TableColumn fx:id="positionTitle" prefWidth="100.0" text="Title" />
+                  <TableColumn fx:id="sunday" prefWidth="100.0" text="Sunday" />
+                  <TableColumn fx:id="monday" prefWidth="100.0" text="Monday" />
+                  <TableColumn fx:id="tuesday" prefWidth="100.0" text="Tuesday" />
+                  <TableColumn fx:id="wednesday" prefWidth="100.0" text="Wednesday" />
+                  <TableColumn fx:id="thursday" prefWidth="100.0" text="Thursday" />
+                  <TableColumn fx:id="friday" prefWidth="100.0" text="Friday" />
+                  <TableColumn fx:id="saturday" prefWidth="100.0" text="Saturday" />
+              </columns>
+            </TableView>
+            <Button fx:id="goBack" layoutX="200.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleAdminGoBack" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #8ed2ff;" text="Go Back" />
+            <Button layoutX="600.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleCreateSchedule" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #8ed2ff;" text="Create Schedule" />
+         </children></AnchorPane>
+    </center>
+</BorderPane>

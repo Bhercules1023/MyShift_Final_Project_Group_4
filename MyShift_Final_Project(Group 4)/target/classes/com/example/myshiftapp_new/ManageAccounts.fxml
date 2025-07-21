@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myshiftapp_new.ManageAccountsController">
+    <top>
+        <AnchorPane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #F0E68C;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="380.0" layoutY="30.0" text="SHIFT" textFill="#8ed2ff">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label layoutX="330.0" layoutY="30.0" text="MY">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="goBackAdmin" layoutX="300.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleAdminGoBack" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #8ed2ff;" text="Go Back" />
+                <Label layoutX="304.0" layoutY="392.0" text="Click Here To Go Back!">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            <Button fx:id="manageAdminAccount" layoutX="93.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleAdminAccount" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #8ed2ff;" text="Admin Account Information" />
+            <Label layoutX="95.0" layoutY="155.0" text="For Admin/Managers:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="179.0" prefHeight="55.0" prefWidth="194.0" text="If you are an Admin OR Manager, click here to make account changes, IF NEEDED!" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="95.0" layoutY="50.0" text="Manage Employee Account:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="manageEmpAccount" layoutX="95.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleEmployeeAccount" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #8ed2ff;" text="Manage Employee Account!" />
+            <Label layoutX="490.0" layoutY="50.0" text="Active Employees ONLY:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ListView fx:id="activeUsers" layoutX="490.0" layoutY="80.0" prefHeight="278.0" prefWidth="199.0" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myshiftapp_new.AdminMainScreenController">
+    <top>
+        <AnchorPane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #F0E68C;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="15.0" layoutY="10.0" text="Welcome,">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="715.0" layoutY="10.0" text="MY">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="740.0" layoutY="10.0" text="SHIFT" textFill="#8ed2ff">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            <Button fx:id="logOut" layoutX="715.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleLogOut" prefWidth="75.0" style="-fx-background-color: #8ed2ff;" text="Log Out" />
+            <Label fx:id="usernameLabel" layoutX="135.0" layoutY="10.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Home">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="adminTimeDisplay" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleAdminTimeDisplay" prefHeight="150.0" prefWidth="250.0" text="TIME DISPLAY">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="adminAnnouncements" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleCreateAnnouncements" prefHeight="150.0" prefWidth="250.0" text="SEND ANNOUCEMENTS" textAlignment="CENTER" wrapText="true">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="account" layoutX="540.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleManageAccounts" prefHeight="150.0" prefWidth="250.0" text="MANAGE ACCOUNTS" textAlignment="CENTER" wrapText="true">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="setAvailability" alignment="CENTER" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleSetAvailability" prefHeight="150.0" prefWidth="250.0" text="SET AVAILABILITY" textAlignment="CENTER" wrapText="true">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="punchInOut" layoutX="275.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleAdminPunchInOut" prefHeight="150.0" prefWidth="250.0" text="PUNCH IN/OUT">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="benefits" layoutX="540.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleBenefits" prefHeight="150.0" prefWidth="250.0" text="BENEFITS">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="notes" layoutX="50.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleAdminNotes" prefHeight="75.0" prefWidth="700.0" style="-fx-background-color: #8ed2ff;" text="NOTES">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Schedule">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="viewAvailability" layoutX="300.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleViewEmployeeAvailability" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #8ed2ff;" text="View Employee Availability" />
+                        <TableView fx:id="viewAdminSchedule" layoutX="25.0" layoutY="40.0" prefHeight="159.0" prefWidth="720.0">
+                          <columns>
+                            <TableColumn fx:id="employeeName" prefWidth="90.0" text="Name" />
+                              <TableColumn fx:id="displaySunday" prefWidth="90.0" text="Sunday" />
+                              <TableColumn fx:id="displayMonday" prefWidth="90.0" text="Monday" />
+                              <TableColumn fx:id="displayTuesday" prefWidth="90.0" text="Tuesday" />
+                              <TableColumn fx:id="displayWednesday" prefWidth="90.0" text="Wednesday" />
+                              <TableColumn fx:id="displayThursday" prefWidth="90.0" text="Thursday" />
+                              <TableColumn fx:id="displayFriday" prefWidth="90.0" text="Friday" />
+                              <TableColumn fx:id="displaySaturday" prefWidth="90.0" text="Saturday" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="25.0" layoutY="15.0" text="Weekly Schedule (Week Of):" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="weekOfLabel" layoutX="270.0" layoutY="15.0" prefWidth="125.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="viewTaskAssigned" layoutX="25.0" layoutY="235.0" prefHeight="150.0" prefWidth="300.0">
+                          <columns>
+                            <TableColumn fx:id="getName" prefWidth="100.0" text="Name" />
+                            <TableColumn fx:id="getPositionTitle" prefWidth="100.0" text="Title" />
+                              <TableColumn fx:id="getTaskAssigned" prefWidth="100.0" text="Task Assigned" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="25.0" layoutY="210.0" text="Task Assigned (For the Week):" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="About MyShift">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="About Us:" underline="true">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="45.0" prefHeight="62.0" prefWidth="565.0" text="- MyShift is dedicated to providing the best payroll application for any company that seeks to work with us!" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="105.0" prefHeight="83.0" prefWidth="569.0" text="- MyShift can provide features for all users such as keeping track of the times a user is punched in or punched out, viewing a weekly schedule, and many more features!" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="185.0" prefHeight="82.0" prefWidth="566.0" text="- We at MyShift are motivatied to give companies exactly what they seek, and if there is something new that users would like for us to add, we will work on developing that feature for you!" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="260.0" prefHeight="70.0" prefWidth="609.0" text="For any questions or inquiries in regards to our application, please visit us at MyShiftApp.com or you may contact us from the following:" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="330.0" text="Email:" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="334.0" text="myshift.application@gmail.com">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="375.0" text="Phone Number:" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="145.0" layoutY="380.0" text="+ 1 (516)-934-5167">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
