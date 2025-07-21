@@ -1,11 +1,25 @@
-In order to log in as a Employee, use these credentials:
+In order to log in as a Employee or Admin/Manager, use these credentials:
 
 Employee 1:
 Username: Brayan
 Password: Group4 
+Birthday: 10/23/2003
 Pin: 1023
+Email: hercb@farmingdale.edu
 
 Employee 2: 
 Username: Justin
 Password: Group4 
+Birthday: 10/24/2009
 Pin: 1024
+Email: justin@farmingdale.edu
+
+Admin:
+Username: Admin
+Password: Group4
+Birthday: 06/21/2000
+Pin: 1023
+Email: admin@gmail.com
+
+*Username and Password are used to get into the application. The extra information is used for other features such as Account Management, or Reset Password.
+
